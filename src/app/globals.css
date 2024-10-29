@@ -3,19 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: linear-gradient(#C8DCE5, #B6CCDA);
+  --foreground: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body[data-theme="t-black"] {
+  --bg-body: linear-gradient(#C8DCE5, #B6CCDA);
+}
+
+body[data-theme="t-blue"] {
+  --bg-body: #F2F2D5;
+}
+
+body[data-theme="t-salmon"] {
+  --bg-body: #F2F2D5;
 }
