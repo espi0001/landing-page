@@ -1,28 +1,43 @@
+"use client";
 import { FaApple } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
-import { RiShoppingBag3Line } from "react-icons/ri";
+import { CgSearch } from "react-icons/cg";
+import { FiShoppingBag } from "react-icons/fi";
 
 const Navigation = () => {
   return (
-    <nav className="flex justify-between items-center p-4">
-      <FaApple size={50} />
+    <header className="flex justify-between items-center">
+      <a href="#">
+        <FaApple size={50} />
+      </a>
 
-      <div className="flex gap-[90px] font-semibold">
-        <a className=" hover:bg-white hover:text-blue-600 hover:p-1 active:bg-white " href="#">
+      <div className="flex gap-[58px] font-medium text-lg">
+        {/* <a className=" hover:bg-white hover:text-[#b5ccd9] hover:p-2 active:bg-white hover:w-[130px] hover:h-9 hover:rounded-[100px] hover:text-center" href="#">
+          Mac
+        </a> */}
+
+        <a id="link" href="#">
           Mac
         </a>
-        <a href="#">iPhone</a>
-        <a href="#">iPad</a>
-        <a href="#">iWatch</a>
-        <a href="#">Support</a>
+        <a id="link" href="#">
+          iPhone
+        </a>
+        <a id="link" href="#">
+          iPad
+        </a>
+        <a id="link" href="#">
+          iWatch
+        </a>
+        <a id="link" href="#">
+          Support
+        </a>
       </div>
 
       <div className="flex gap-4">
-        <CiSearch size={24} />
-        <hr />
-        <RiShoppingBag3Line size={24} />
+        <CgSearch size={24} />
+        <hr className="h-[22px] outline outline-[0.5px] rounded" />
+        <FiShoppingBag size={24} />
       </div>
-    </nav>
+    </header>
   );
 };
 
